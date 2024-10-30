@@ -1,0 +1,74 @@
+<!-- Banner Principal -->
+<div class="banner">
+  <h1>Biblioteca Premium de Jogos</h1>
+  <p>Explore e favorite seus jogos preferidos!</p>
+</div>
+
+<!-- Grid de Jogos Favoritos -->
+<div class="favorites-container">
+  <h2>Favoritos</h2>
+  <div class="game-grid" id="favoriteGames"></div>
+</div>
+
+<!-- Barra de Pesquisa -->
+<div class="search-container">
+  <input type="text" id="searchBar" onkeyup="searchGames()" placeholder="Pesquisar jogos...">
+</div>
+
+<!-- Grid de Jogos -->
+<div class="game-grid" id="gameGrid">
+  <%= for game <- @games do %>
+    <div class="game-card" data-id={game.title}>
+      <div class="favorite-icon" phx-click="toggle-favorite" phx-value-game-title={game.title}>★</div>
+      <img src={game.image_url} alt={game.title}>
+      <div class="game-info">
+        <h2><%= game.title %></h2>
+        <p><%= game.description %></p>
+        <div class="game-meta">
+          <span>Faixa etária: <%= game.age_rating %></span>
+          <span>Gênero: <%= game.genre %></span>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
+
+<script>
+  function toggleFavorite(gameId) {
+    const card = document.querySelector(`.game-card[data-id="${gameId}"]`);
+    const icon = card.querySelector(".favorite-icon");
+    const favoriteGames = document.getElementById("favoriteGames");
+
+    // Alterna a classe 'favorited' no ícone
+    const isFavorited = icon.classList.toggle("favorited");
+
+    // Adiciona ou remove o jogo do grid de favoritos
+    if (isFavorited) {
+      // Clona o card para a lista de favoritos
+      const clone = card.cloneNode(true);
+      clone.querySelector(".favorite-icon").onclick = () => toggleFavorite(gameId);
+      favoriteGames.appendChild(clone);
+    } else {
+      // Remove o card da lista de favoritos
+      const favoriteCard = favoriteGames.querySelector(`.game-card[data-id="${gameId}"]`);
+      if (favoriteCard) {
+        favoriteGames.removeChild(favoriteCard);
+      }
+    }
+  }
+
+  // Função de Pesquisa
+  function searchGames() {
+    const searchInput = document.getElementById('searchBar').value.toLowerCase();
+    const gameCards = document.querySelectorAll('.game-card');
+
+    gameCards.forEach(card => {
+      const title = card.querySelector('h2').textContent.toLowerCase();
+      if (title.includes(searchInput)) {
+        card.style.display = "";
+      } else {
+        card.style.display = "none";
+      }
+    });
+  }
+</script>

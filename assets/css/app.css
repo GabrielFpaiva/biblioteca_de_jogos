@@ -1,0 +1,144 @@
+/* Cores e Fonte */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1b1b1b;
+    color: #dcdcdc;
+    margin: 0;
+  }
+  
+  h1, h2 {
+    color: #f5f5f5;
+  }
+  
+  /* Banner Principal */
+  .banner {
+    background-color: #333;
+    color: #f5f5f5;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  }
+  
+  .banner p {
+    color: #aaa;
+  }
+  
+  /* Container de Favoritos */
+  .favorites-container {
+    margin: 20px auto;
+    max-width: 1200px;
+  }
+  
+  .favorites-container h2 {
+    color: #e3e3e3;
+    margin-bottom: 10px;
+  }
+  
+  /* Barra de Pesquisa */
+  .search-container {
+    text-align: center;
+    margin: 20px 0;
+  }
+  
+  #searchBar {
+    width: 80%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #555;
+    border-radius: 5px;
+    background-color: #222;
+    color: #dcdcdc;
+  }
+  
+  #searchBar:focus {
+    outline: none;
+    border-color: #007bff;
+  }
+  
+  /* Grid de Jogos */
+  .game-grid {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .game-card {
+    background-color: #2b2b2b;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    position: relative;
+  }
+  
+  .game-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
+  }
+  
+  .game-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+  }
+  
+  .game-info {
+    padding: 15px;
+    text-align: left;
+  }
+  
+  .game-info h2 {
+    font-size: 1.1em;
+    margin: 0 0 10px;
+    color: #f5f5f5;
+  }
+  
+  .game-info p {
+    font-size: 0.9em;
+    color: #bbb;
+    margin: 0 0 15px;
+  }
+  
+  .game-meta {
+    font-size: 0.8em;
+    color: #888;
+  }
+  
+  /* Ícone de Favorito */
+  .favorite-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #555;
+    transition: color 0.3s ease;
+  }
+  
+  .favorite-icon.favorited {
+    color: gold;
+  }
+  
+  /* Container de Carregar Mais */
+  .load-more {
+    text-align: center;
+    margin: 20px 0;
+  }
+  
+  .btn-load-more {
+    padding: 10px 20px;
+    background-color: #444;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-load-more:hover {
+    background-color: #666;
+  }
+  
