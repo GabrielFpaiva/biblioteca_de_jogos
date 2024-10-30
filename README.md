@@ -7,12 +7,17 @@ Bem-vindo à Biblioteca de Jogos! Este é um projeto de uma aplicação web cons
 ### Exploração de Jogos
 - **Biblioteca de Jogos**: Exibe uma coleção de jogos populares, com título, imagem, descrição, faixa etária e gênero.
 - **Favoritos**: Marque os jogos como favoritos clicando no ícone de estrela. Os jogos favoritos são exibidos em uma seção especial para fácil acesso.
+A aplicação utiliza a RAWG API, uma API open source que fornece informações sobre jogos, incluindo título, imagem, gênero e faixa etária.
 
 ### Pesquisa
 - **Barra de Pesquisa**: Pesquise um jogo específico por nome. Conforme você digita, a lista é filtrada automaticamente para mostrar apenas os jogos que correspondem à busca.
 
-### Interface Premium
+### Interface
 - **Design Inspirado em Plataformas**: O layout foi criado com uma interface escura, inspirada em bibliotecas de jogos como Steam e PlayStation.
+
+### API
+
+- A aplicação utiliza a RAWG API, uma API open source que fornece informações sobre jogos, incluindo título, imagem, gênero e faixa etária.
 
 ## Capturas de Tela 📸
 
