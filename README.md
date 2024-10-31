@@ -39,8 +39,8 @@ A aplicação utiliza a RAWG API, uma API open source que fornece informações 
 
 1. **Clone o Repositório**:
 
-   git clone https://github.com/seu-usuario/biblioteca-premium-jogos.git
-   cd biblioteca-premium-jogos
+   git clone https://github.com/GabrielFpaiva/biblioteca_de_jogos.git
+   cd biblioteca_de_jogos
 
 2. **Instale as Dependências**:
 
